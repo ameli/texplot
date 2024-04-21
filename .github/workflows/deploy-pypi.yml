@@ -4,16 +4,22 @@ on:
     push:
         branches:
             - main
+    release:
+        types:
+            - published
 
 jobs:
     build-and-deploy:
         runs-on: ubuntu-latest
-        name: Publish python distribution to PyPi
+        name: Publish python distribution to PyPI
         steps:
-            - name: Setup python
-              uses: actions/setup-python@v1
+            - name: Checkout
+              uses: actions/checkout@v3
+
+            - name: Setup Python
+              uses: actions/setup-python@v4
               with:
-                  python-version: 3.8
+                python-version: '3.12'
 
             - name: Install twine and wheel
               run: |
@@ -21,17 +27,15 @@ jobs:
                   python -m pip install --upgrade twine
                   python -m pip install --upgrade wheel
 
-            - name: Checkout
-              uses: actions/checkout@master
-
             - name: Build distribution
               run: |
                   python setup.py sdist
                   python setup.py bdist_wheel
                   twine check dist/*
 
-            - name: Publish to PyPi
-              uses: pypa/gh-action-pypi-publish@master
+            - name: Publish to PyPI
+              uses: pypa/gh-action-pypi-publish@release/v1
               with:
+                  verbose: true
                   user: __token__
                   password: ${{ secrets.pypi_password }}
