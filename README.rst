@@ -58,7 +58,7 @@ Call :func:`texplot.set_theme` function to set the *texplot* theme globally in y
     >>> texplot.examples.plot_function(ax)
     >>> plt.show()
 
-![function](./docs/source/_static/images/plots/function.png)
+![function](/docs/source/_static/images/plots/function.png)
 
 The theme set as described above will affect your entire Python script for its duration. However, you can revert to the default *matplotlib* theme at any time by calling the :func:`texplot.reset_theme` function as shown below:
 
@@ -73,7 +73,7 @@ The theme set as described above will affect your entire Python script for its d
     >>> texplot.examples.plot_function(ax2)
     >>> plt.show()
 
-![function no theme](./docs/source/_static/images/plots/function_no_theme.png)
+![function no theme](/docs/source/_static/images/plots/function_no_theme.png)
 
 
 Set Theme Within a Local Scope
