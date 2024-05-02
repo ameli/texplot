@@ -159,7 +159,10 @@ In the example below, we configure a dark background style, increase the font si
     >>>     texplot.examples.plot_bifurcation_diagram(ax)
     >>>     plt.show()
 
-![logistic](./docs/source/_static/images/plots/logistic.png)
+.. figure:: ./docs/source/_static/images/plots/logistic.png
+   :align: left
+   :figwidth: 100%
+   :width: 100%
 
 Show and Save Plots
 ===================
@@ -184,7 +187,10 @@ When working on a machine without display graphics, such as a remote server that
     ...                          show_and_save=True, verbose=True):
     plot saved to '/home/user/lorenz.pdf'.
 
-![lorenz](./docs/source/_static/images/plots/lorenz.png)
+.. figure:: ./docs/source/_static/images/plots/lorenz.png
+   :align: left
+   :figwidth: 100%
+   :width: 100%
 
 Test Package
 ============
@@ -219,7 +225,7 @@ License
 .. This package includes `Computer Modern <https://tug.org/FontCatalogue/computermodern/>`__ font for rendering :math:`\LaTeX`, which is distributed under `Knuth license <https://www.ctan.org/license/knuth>`__, a permissive license authored by Donald Knuth.
 
 .. |logo| image:: https://raw.githubusercontent.com/ameli/texplot/main/docs/source/_static/images/icons/logo-texplot-light.svg
-   :width: 160
+   :width: 190
 .. |deploy-docs| image:: https://img.shields.io/github/actions/workflow/status/ameli/texplot/deploy-docs.yml?label=docs
    :target: https://github.com/ameli/texplot/actions?query=workflow%3Adeploy-docs
 .. |deploy-docker| image:: https://img.shields.io/github/actions/workflow/status/ameli/texplot/deploy-docker.yml?label=build%20docker
