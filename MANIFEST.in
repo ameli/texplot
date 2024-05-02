@@ -1,4 +1,27 @@
+global-include *.pyx
+
+global-exclude *.py[cod] __pycache__
+global-exclude *.so *.dll *.dylib
+global-exclude *.o
+global-exclude *.swp
+
+recursive-include texplot *.rst
+
+include CHANGELOG.rst
 include README.rst
 include AUTHORS.txt
 include LICENSE.txt
 include requirements.txt
+include pyproject.toml
+
+exclude .coverage
+exclude .coveragerc
+exclude .gitattributes
+exclude .tokeignore
+
+prune docs
+prune conda-recipe
+prune tests
+prune .git
+prune .github
+prune .tox
