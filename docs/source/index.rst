@@ -188,7 +188,7 @@ In the example below, we configure a dark background style, increase the font si
 Show and Save Plots
 ===================
 
-When working on a machine without display graphics, such as a remote server that lacks X11, displaying plots is not possible. Instead, plots should be saved. The :func:`texplot.save_plot` function provides a simple wrapper around `matplotlib.pyplot.savefig <>`__ to facilitate this. Additionally, the :func:`texplot.show_or_save_plot` function attempts to display plots initially. If no graphical backend is available, it saves the plot instead. Additionally, you can configure it to both show and save the plot. Here is an example:
+When working on a machine without display graphics, such as a remote server that lacks X11, displaying plots is not possible. Instead, plots should be saved. The :func:`texplot.save_plot` function provides a simple wrapper around `matplotlib.pyplot.savefig <https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.savefig.html>`__ to facilitate this. Additionally, the :func:`texplot.show_or_save_plot` function attempts to display plots initially. If no graphical backend is available, it saves the plot instead. Additionally, you can configure it to both show and save the plot. Here is an example:
 
 .. code-block:: python
    :emphasize-lines: 11, 12, 13

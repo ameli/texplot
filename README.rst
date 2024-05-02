@@ -3,7 +3,7 @@
 
 |deploy-docs|
 
-`texplot` is a python package to enhance `matplotlib` plots with publication-quality style.
+*texplot* is a python package to enhance *matplotlib* plots with publication-quality style.
 
 Links
 =====
@@ -44,7 +44,7 @@ Set Theme
 Set Theme Globally
 ------------------
 
-Call :func:`texplot.set_theme` function to set the `texplot` theme globally in your script:
+Call :func:`texplot.set_theme` function to set the *texplot* theme globally in your script:
 
 .. code-block:: python
    :emphasize-lines: 2, 3
@@ -58,9 +58,9 @@ Call :func:`texplot.set_theme` function to set the `texplot` theme globally in y
     >>> texplot.examples.plot_function(ax)
     >>> plt.show()
 
-![](docs/source/_static/images/plots/function.png)
+![](./docs/source/_static/images/plots/function.png)
 
-The theme set as described above will affect your entire Python script for its duration. However, you can revert to the default `matplotlib` theme at any time by calling the :func:`texplot.reset_theme` function as shown below:
+The theme set as described above will affect your entire Python script for its duration. However, you can revert to the default *matplotlib* theme at any time by calling the :func:`texplot.reset_theme` function as shown below:
 
 .. code-block:: python
    :emphasize-lines: 2
@@ -73,13 +73,13 @@ The theme set as described above will affect your entire Python script for its d
     >>> texplot.examples.plot_function(ax2)
     >>> plt.show()
 
-![](docs/source/_static/images/plots/function_no_theme.png)
+![](./docs/source/_static/images/plots/function_no_theme.png)
 
 
 Set Theme Within a Local Scope
 ------------------------------
 
-The :func:`texplot.theme` function acts as a context manager, allowing you to apply the `texplot` theme within a specific local scope or function. The example below demonstrates setting the theme in a local scope. Outside of this scope, the default `matplotlib` theme remains unchanged.
+The :func:`texplot.theme` function acts as a context manager, allowing you to apply the *texplot* theme within a specific local scope or function. The example below demonstrates setting the theme in a local scope. Outside of this scope, the default *matplotlib* theme remains unchanged.
 
 .. code-block:: python
    :emphasize-lines: 4
@@ -92,7 +92,7 @@ The :func:`texplot.theme` function acts as a context manager, allowing you to ap
     >>>     texplot.examples.plot_function(ax)
     >>>     plt.show()
 
-Similarly, you can use the context manager with a function. In the example below, the `texplot` theme is applied only within the ``plot()`` function. Outside this function, the default `matplotlib` theme remains unchanged.
+Similarly, you can use the context manager with a function. In the example below, the *texplot* theme is applied only within the ``plot()`` function. Outside this function, the default *matplotlib* theme remains unchanged.
 
 .. code-block:: python
    :emphasize-lines: 4
@@ -153,12 +153,12 @@ In the example below, we configure a dark background style, increase the font si
     >>>     texplot.examples.plot_bifurcation_diagram(ax)
     >>>     plt.show()
 
-![](docs/source/_static/images/plots/logistic.png)
+![](./docs/source/_static/images/plots/logistic.png)
 
 Show and Save Plots
 ===================
 
-When working on a machine without display graphics, such as a remote server that lacks X11, displaying plots is not possible. Instead, plots should be saved. The :func:`texplot.save_plot` function provides a simple wrapper around `matplotlib.pyplot.savefig <>`__ to facilitate this. Additionally, the :func:`texplot.show_or_save_plot` function attempts to display plots initially. If no graphical backend is available, it saves the plot instead. Additionally, you can configure it to both show and save the plot. Here is an example:
+When working on a machine without display graphics, such as a remote server that lacks X11, displaying plots is not possible. Instead, plots should be saved. The :func:`texplot.save_plot` function provides a simple wrapper around `matplotlib.pyplot.savefig <https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.savefig.html>`__ to facilitate this. Additionally, the :func:`texplot.show_or_save_plot` function attempts to display plots initially. If no graphical backend is available, it saves the plot instead. Additionally, you can configure it to both show and save the plot. Here is an example:
 
 .. code-block:: python
    :emphasize-lines: 11, 12, 13
@@ -178,7 +178,7 @@ When working on a machine without display graphics, such as a remote server that
     ...                          show_and_save=True, verbose=True):
     plot saved to '/home/user/lorenz.pdf'.
 
-![](docs/source/_static/images/plots/lorenz.png)
+![](./docs/source/_static/images/plots/lorenz.png)
 
 Test Package
 ============
