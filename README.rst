@@ -58,7 +58,7 @@ Call :func:`texplot.set_theme` function to set the *texplot* theme globally in y
     >>> texplot.examples.plot_function(ax)
     >>> plt.show()
 
-![](./docs/source/_static/images/plots/function.png)
+![function](./docs/source/_static/images/plots/function.png)
 
 The theme set as described above will affect your entire Python script for its duration. However, you can revert to the default *matplotlib* theme at any time by calling the :func:`texplot.reset_theme` function as shown below:
 
@@ -73,7 +73,7 @@ The theme set as described above will affect your entire Python script for its d
     >>> texplot.examples.plot_function(ax2)
     >>> plt.show()
 
-![](./docs/source/_static/images/plots/function_no_theme.png)
+![function no theme](./docs/source/_static/images/plots/function_no_theme.png)
 
 
 Set Theme Within a Local Scope
@@ -153,7 +153,7 @@ In the example below, we configure a dark background style, increase the font si
     >>>     texplot.examples.plot_bifurcation_diagram(ax)
     >>>     plt.show()
 
-![](./docs/source/_static/images/plots/logistic.png)
+![logistic](./docs/source/_static/images/plots/logistic.png)
 
 Show and Save Plots
 ===================
@@ -178,7 +178,7 @@ When working on a machine without display graphics, such as a remote server that
     ...                          show_and_save=True, verbose=True):
     plot saved to '/home/user/lorenz.pdf'.
 
-![](./docs/source/_static/images/plots/lorenz.png)
+![lorenz](./docs/source/_static/images/plots/lorenz.png)
 
 Test Package
 ============
