@@ -11,11 +11,8 @@
 # Imports
 # =======
 
-from .plot_utilities import theme, get_theme, set_theme, reset_theme, \
-    save_plot, show_or_save_plot
-from . import examples
+from .plot_function import plot_function
+from .plot_bifurcation_diagram import plot_bifurcation_diagram
+from .plot_lorenz import plot_lorenz
 
-__all__ = ['theme', 'get_theme', 'set_theme', 'reset_theme',
-           'save_plot', 'show_or_save_plot', 'examples']
-
-from .__version__ import __version__                          # noqa: F401 E402
+__all__ = ['plot_function', 'plot_bifurcation_diagram', 'plot_lorenz']

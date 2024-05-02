@@ -1,40 +1,59 @@
-|logo|
-*********
+.. module:: texplot
+
+|project| Documentation
+***********************
 
 |deploy-docs|
 
 |project| is a python package to enhance `matplotlib` plots with publication-quality style.
 
-Links
-=====
+.. grid:: 4
 
-* `Documentation <https://ameli.github.io/texplot>`__
-* `PyPI <https://pypi.org/project/texplot/>`__
-* `Anaconda <https://anaconda.org/s-ameli/texplot>`__
-* `Github <https://github.com/ameli/texplot>`__
+    .. grid-item-card:: GitHub
+        :link: https://github.com/ameli/texplot
+        :text-align: center
+        :class-card: custom-card-link
+
+    .. grid-item-card:: PyPI
+        :link: https://pypi.org/project/texplot/
+        :text-align: center
+        :class-card: custom-card-link
+
+    .. grid-item-card:: Anaconda
+        :link: https://anaconda.org/s-ameli/texplot
+        :text-align: center
+        :class-card: custom-card-link
+
+    .. grid-item-card:: API reference
+        :link: api
+        :link-type: ref
+        :text-align: center
+        :class-card: custom-card-link
 
 Install
 =======
 
+|pypi| |conda-version|
+
+.. grid:: 2
+
+    .. grid-item-card:: 
+
+        Install with ``pip`` from `PyPI <https://pypi.org/project/texplot/>`_:
+
+        .. prompt:: bash
+            
+            pip install texplot
+
+    .. grid-item-card::
+
+        Install with ``conda`` from `Anaconda Cloud <https://anaconda.org/s-ameli/texplot>`_:
+
+        .. prompt:: bash
+            
+            conda install -c s-ameli texplot
+
 This package requires :math:`\LaTeX` to be installed. Ensure that the ``latex`` executable is available on your system's ``PATH``.
-
-Install with ``pip``
---------------------
-
-|pypi|
-
-::
-
-    pip install texplot
-
-Install with ``conda``
-----------------------
-
-|conda-version|
-
-::
-
-    conda install -c s-ameli texplot
 
 Set Theme
 =========
@@ -227,8 +246,6 @@ License
 
 .. This package includes `Computer Modern <https://tug.org/FontCatalogue/computermodern/>`__ font for rendering :math:`\LaTeX`, which is distributed under `Knuth license <https://www.ctan.org/license/knuth>`__, a permissive license authored by Donald Knuth.
 
-.. |logo| image:: https://raw.githubusercontent.com/ameli/texplot/main/docs/source/_static/images/icons/logo-texplot-light.svg
-   :width: 160
 .. |deploy-docs| image:: https://img.shields.io/github/actions/workflow/status/ameli/texplot/deploy-docs.yml?label=docs
    :target: https://github.com/ameli/texplot/actions?query=workflow%3Adeploy-docs
 .. |deploy-docker| image:: https://img.shields.io/github/actions/workflow/status/ameli/texplot/deploy-docker.yml?label=build%20docker

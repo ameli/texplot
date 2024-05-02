@@ -242,14 +242,18 @@ def get_theme(
     """
     Returns a dictionary that can be used to update plt.rcParams.
 
-    Usage:
+    Example
+    =======
+
     Before a function, add this line:
 
-    @matplotlib.rc_context(get_theme(font_scale=1.2))
-    def some_plotting_function():
-        ...
+    .. code-block:: python
 
-        plot.show()
+        >>> @matplotlib.rc_context(get_theme(font_scale=1.2))
+        >>> def some_plotting_function():
+        >>>     ...
+
+        >>> plot.show()
 
     Note that the plot.show() must be within the "context" (meaning the scope)
     of the above rc_context declaration. That is, if plt.show() is postponed
@@ -396,7 +400,7 @@ def save_plot(
             extensions = [extension]
         else:
             # No extension is provided. Save to both svg and pdf
-            extensions = ['svg', 'pdf']
+            extensions = ['.svg', '.pdf']
 
     if not os.access(directory, os.W_OK):
         raise RuntimeError(
@@ -404,8 +408,7 @@ def save_plot(
 
     # For each extension, save a file
     for extension in extensions:
-        fullpath_filename = os.path.join(directory,
-                                         base_filename + '.' + extension)
+        fullpath_filename = os.path.join(directory, base_filename + extension)
 
         plt.savefig(
                 fullpath_filename, dpi=dpi,

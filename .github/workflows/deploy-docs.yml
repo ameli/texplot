@@ -1,0 +1,48 @@
+name: deploy-docs
+
+on:
+    push:
+        branches:
+            - main
+    pull_request:
+        branches:
+            - main
+
+jobs:
+    build-and-deploy:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v3
+
+            - name: Set up Python
+              uses: actions/setup-python@v4
+              with:
+                  python-version: '3.11'
+
+            # Compile package with in-source build
+            # Use force-reinstall to downgrade matplotlib if necessary to be compatible
+            - name: Install
+              run: |
+                python -m pip install --upgrade pip
+                python -m pip install -r requirements.txt
+                # python -m pip install --force-reinstall -r requirements_plot.txt
+                python setup.py install  # do not use "pip install ." as it fails
+
+            # Build sphinx in /docs/build
+            - name: Build Sphinx
+              run: |
+                sudo apt-get update
+                sudo apt-get install pandoc -y
+                python -m pip install -r docs/requirements.txt
+                export PATH=$HOME/.local/bin:$PATH
+                make clean html --directory=docs
+                touch docs/build/html/.nojekyll
+                echo 'Visit [Documentation](https://ameli.github.io/texplot/index.html).' > docs/build/html/README.md
+
+            # Deploy to github pages
+            - name: Deploy
+              uses: JamesIves/github-pages-deploy-action@v4
+              with:
+                folder: docs/build/html
+                branch: gh-pages
