@@ -225,7 +225,7 @@ License
 .. This package includes `Computer Modern <https://tug.org/FontCatalogue/computermodern/>`__ font for rendering :math:`\LaTeX`, which is distributed under `Knuth license <https://www.ctan.org/license/knuth>`__, a permissive license authored by Donald Knuth.
 
 .. |logo| image:: https://raw.githubusercontent.com/ameli/texplot/main/docs/source/_static/images/icons/logo-texplot-light.svg
-   :width: 190
+   :width: 200
 .. |deploy-docs| image:: https://img.shields.io/github/actions/workflow/status/ameli/texplot/deploy-docs.yml?label=docs
    :target: https://github.com/ameli/texplot/actions?query=workflow%3Adeploy-docs
 .. |deploy-docker| image:: https://img.shields.io/github/actions/workflow/status/ameli/texplot/deploy-docker.yml?label=build%20docker
