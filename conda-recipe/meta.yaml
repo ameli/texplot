@@ -14,26 +14,13 @@ build:
     script: "python -m pip install . -vv"
 
 requirements:
-    build:
-    #     - {{ compiler('c') }}
-    #     - {{ compiler('cxx') }}
-    #     - llvm-openmp  # [osx]
-
     host:
         # - python {{ python }}
         - python
         - setuptools
-        # - numpy>1.11
-        # - scipy>=1.5
-        # - cython>=0.29
-        # - pip
-        # - special_functions       # needs -c s-ameli
-        # - llvm-openmp  # [osx]
-        # - pytest-runner
     run:
         # - python {{ python }}
         - python
-        # - {{ pin_compatible('numpy') }}
         - matplotlib
 
 test:
