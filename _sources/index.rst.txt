@@ -203,9 +203,9 @@ When working on a machine without display graphics, such as a remote server that
     >>>     texplot.examples.lorenz(ax)
     >>>
     >>>     # Show and save plot
-    >>>     texplot.show_or_save(plt, default_filename='lorenz.pdf',
-    ...                          transparent_background=True, dpi=200,
-    ...                          show_and_save=True, verbose=True):
+    >>>     texplot.show_or_save_plot(plt, default_filename='lorenz.pdf',
+    ...                               transparent_background=True, dpi=200,
+    ...                               show_and_save=True, verbose=True)
     plot saved to '/home/user/lorenz.pdf'.
 
 .. figure:: _static/images/plots/lorenz.png
@@ -217,7 +217,7 @@ When working on a machine without display graphics, such as a remote server that
 Test Package
 ============
 
-|codecov-devel|
+|build-linux| |codecov-devel|
 
 To test the package, first clone the source code from the repository and install the required test packages by:
 
@@ -270,5 +270,7 @@ License
    :target: https://github.com/ameli/texplot
 .. |languages| image:: https://img.shields.io/github/languages/count/ameli/texplot
    :target: https://github.com/ameli/texplot
+.. |build-linux| image:: https://img.shields.io/github/actions/workflow/status/ameli/texplot/build-linux.yml
+   :target: https://github.com/ameli/texplot/actions?query=workflow%3Abuild-linux 
 .. .. |binder| image:: https://mybinder.org/badge_logo.svg
 ..    :target: https://mybinder.org/v2/gh/ameli/texplot/HEAD?filepath=notebooks%2Fquick_start.ipynb

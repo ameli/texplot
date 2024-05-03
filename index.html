@@ -486,9 +486,9 @@ span.prompt1:before {
  <span class="o">&gt;&gt;&gt;</span>     <span class="n">texplot</span><span class="o">.</span><span class="n">examples</span><span class="o">.</span><span class="n">lorenz</span><span class="p">(</span><span class="n">ax</span><span class="p">)</span>
  <span class="o">&gt;&gt;&gt;</span>
  <span class="o">&gt;&gt;&gt;</span>     <span class="c1"># Show and save plot</span>
-<span class="hll"> <span class="o">&gt;&gt;&gt;</span>     <span class="n">texplot</span><span class="o">.</span><span class="n">show_or_save</span><span class="p">(</span><span class="n">plt</span><span class="p">,</span> <span class="n">default_filename</span><span class="o">=</span><span class="s1">&#39;lorenz.pdf&#39;</span><span class="p">,</span>
-</span><span class="hll"> <span class="o">...</span>                          <span class="n">transparent_background</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span>
-</span><span class="hll"> <span class="o">...</span>                          <span class="n">show_and_save</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+<span class="hll"> <span class="o">&gt;&gt;&gt;</span>     <span class="n">texplot</span><span class="o">.</span><span class="n">show_or_save_plot</span><span class="p">(</span><span class="n">plt</span><span class="p">,</span> <span class="n">default_filename</span><span class="o">=</span><span class="s1">&#39;lorenz.pdf&#39;</span><span class="p">,</span>
+</span><span class="hll"> <span class="o">...</span>                               <span class="n">transparent_background</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span>
+</span><span class="hll"> <span class="o">...</span>                               <span class="n">show_and_save</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </span> <span class="n">plot</span> <span class="n">saved</span> <span class="n">to</span> <span class="s1">&#39;/home/user/lorenz.pdf&#39;</span><span class="o">.</span>
 </pre></div>
 </div>
@@ -498,7 +498,7 @@ span.prompt1:before {
 </section>
 <section id="test-package">
 <h2>Test Package<a class="headerlink" href="#test-package" title="Permalink to this heading">#</a></h2>
-<p><a class="reference external" href="https://codecov.io/gh/ameli/texplot"><img alt="codecov-devel" src="https://img.shields.io/codecov/c/github/ameli/texplot" /></a></p>
+<p><a class="reference external" href="https://github.com/ameli/texplot/actions?query=workflow%3Abuild-linux"><img alt="build-linux" src="https://img.shields.io/github/actions/workflow/status/ameli/texplot/build-linux.yml" /></a> <a class="reference external" href="https://codecov.io/gh/ameli/texplot"><img alt="codecov-devel" src="https://img.shields.io/codecov/c/github/ameli/texplot" /></a></p>
 <p>To test the package, first clone the source code from the repository and install the required test packages by:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span class="prompt1">git<span class="w"> </span>clone<span class="w"> </span>https://github.com/ameli/texplot.git</span>
 <span class="prompt1"><span class="nb">cd</span><span class="w"> </span>texplot</span>
