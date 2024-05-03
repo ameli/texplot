@@ -250,7 +250,7 @@ License
    :target: https://github.com/ameli/texplot/actions?query=workflow%3Adeploy-docs
 .. |deploy-docker| image:: https://img.shields.io/github/actions/workflow/status/ameli/texplot/deploy-docker.yml?label=build%20docker
    :target: https://github.com/ameli/texplot/actions?query=workflow%3Adeploy-docker
-.. |codecov-devel| image:: https://img.shields.io/codecov/c/github/ameli/texplot
+.. |codecov-devel| image:: https://codecov.io/gh/ameli/texplot/graph/badge.svg?token=52HVURUBK1
    :target: https://codecov.io/gh/ameli/texplot
 .. |license| image:: https://img.shields.io/github/license/ameli/texplot
    :target: https://opensource.org/licenses/BSD-3-Clause
