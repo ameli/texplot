@@ -51,7 +51,7 @@ Install
 
         .. prompt:: bash
             
-            conda install -c s-ameli texplot
+            conda install s-ameli::texplot
 
 This package requires :math:`\LaTeX` to be installed. Ensure that the ``latex`` executable is available on your system's ``PATH``.
 
