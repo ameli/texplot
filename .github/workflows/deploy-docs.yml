@@ -28,9 +28,7 @@ jobs:
             - name: Install
               run: |
                 python -m pip install --upgrade pip
-                python -m pip install -r requirements.txt
-                # python -m pip install --force-reinstall -r requirements_plot.txt
-                python setup.py install  # do not use "pip install ." as it fails
+                python -m pip install .
 
             # Build sphinx in /docs/build
             - name: Build Sphinx

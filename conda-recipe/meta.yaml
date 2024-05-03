@@ -1,0 +1,60 @@
+{% set name = "texplot" %}
+{% set data = load_setup_py_data() %}
+
+package:
+    name: "{{ name|lower }}"
+    version: "{{ data['version'] }}"
+
+source:
+    path: ..
+
+build:
+    noarch: python
+    number: 0
+    script: "python -m pip install . -vv"
+
+requirements:
+    build:
+    #     - {{ compiler('c') }}
+    #     - {{ compiler('cxx') }}
+    #     - llvm-openmp  # [osx]
+
+    host:
+        # - python {{ python }}
+        - python
+        - setuptools
+        # - numpy>1.11
+        # - scipy>=1.5
+        # - cython>=0.29
+        # - pip
+        # - special_functions       # needs -c s-ameli
+        # - llvm-openmp  # [osx]
+        # - pytest-runner
+    run:
+        # - python {{ python }}
+        - python
+        # - {{ pin_compatible('numpy') }}
+        - matplotlib
+
+test:
+    imports:
+        - texplot
+    requires:
+        - pytest
+        - pytest-cov
+        - pytest-runner
+
+about:
+    home: {{ data['url'] }}
+    license: BSD-3-Clause
+    license_family: BSD
+    license_file: LICENSE.txt
+    summary: {{ data['description'] }}
+    description: {{ data['description'] }}
+    doc_url: https://ameli.github.io/texplot/index.html
+    doc_source_url: https://github.com/ameli/texplot/blob/main/README.rst
+    dev_url: https://github.com/ameli/texplot
+
+extra:
+    recipe-maintainers:
+        - ameli

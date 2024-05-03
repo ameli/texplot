@@ -11,7 +11,6 @@ Links
 * `Documentation <https://ameli.github.io/texplot>`__
 * `PyPI <https://pypi.org/project/texplot/>`__
 * `Anaconda <https://anaconda.org/s-ameli/texplot>`__
-* `Github <https://github.com/ameli/texplot>`__
 
 Install
 =======
@@ -44,10 +43,9 @@ Set Theme
 Set Theme Globally
 ------------------
 
-Call :func:`texplot.set_theme` function to set the *texplot* theme globally in your script:
+Call `texplot.set_theme <https://ameli.github.io/texplot/generated/texplot.set_theme.html#texplot.set_theme>`__ function to set the *texplot* theme globally in your script:
 
 .. code-block:: python
-   :emphasize-lines: 2, 3
 
     >>> import matplotlib.pyplot as plt
     >>> import texplot
@@ -63,10 +61,9 @@ Call :func:`texplot.set_theme` function to set the *texplot* theme globally in y
    :figwidth: 100%
    :width: 100%
 
-The theme set as described above will affect your entire Python script for its duration. However, you can revert to the default *matplotlib* theme at any time by calling the :func:`texplot.reset_theme` function as shown below:
+The theme set as described above will affect your entire Python script for its duration. However, you can revert to the default *matplotlib* theme at any time by calling the `texplot.reset_theme <https://ameli.github.io/texplot/generated/texplot.reset_theme.html#texplot.reset_theme>`__ function as shown below:
 
 .. code-block:: python
-   :emphasize-lines: 2
 
     >>> # Resetting to default matplotlib theme
     >>> texplot.reset_theme()
@@ -85,10 +82,9 @@ The theme set as described above will affect your entire Python script for its d
 Set Theme Within a Local Scope
 ------------------------------
 
-The :func:`texplot.theme` function acts as a context manager, allowing you to apply the *texplot* theme within a specific local scope or function. The example below demonstrates setting the theme in a local scope. Outside of this scope, the default *matplotlib* theme remains unchanged.
+The `texplot.theme <https://ameli.github.io/texplot/generated/texplot.theme.html#texplot.theme>`__ function acts as a context manager, allowing you to apply the *texplot* theme within a specific local scope or function. The example below demonstrates setting the theme in a local scope. Outside of this scope, the default *matplotlib* theme remains unchanged.
 
 .. code-block:: python
-   :emphasize-lines: 4
 
     >>> import matplotlib.pyplot as plt
     >>> import texplot
@@ -101,7 +97,6 @@ The :func:`texplot.theme` function acts as a context manager, allowing you to ap
 Similarly, you can use the context manager with a function. In the example below, the *texplot* theme is applied only within the ``plot()`` function. Outside this function, the default *matplotlib* theme remains unchanged.
 
 .. code-block:: python
-   :emphasize-lines: 4
 
     >>> import matplotlib.pyplot as plt
     >>> import texplot
@@ -117,7 +112,7 @@ Similarly, you can use the context manager with a function. In the example below
 Theme Options
 =============
 
-You can customize the theme by passing arguments to either the :func:`texplot.set_theme` or :func:`texplot.theme` functions. The parameters for both functions are identical and detailed in the :ref:`API reference <api>`. The available arguments are as follows:
+You can customize the theme by passing arguments to either the `texplot.set_theme <https://ameli.github.io/texplot/generated/texplot.set_theme.html#texplot.set_theme>`__ or `texplot.theme <https://ameli.github.io/texplot/generated/texplot.theme.html#texplot.theme>`__ functions. The parameters for both functions are identical and detailed in the `API reference <https://ameli.github.io/texplot/api.html>`__. The available arguments are as follows:
 
 .. list-table::
     :header-rows: 1
@@ -144,7 +139,6 @@ You can customize the theme by passing arguments to either the :func:`texplot.se
 In the example below, we configure a dark background style, increase the font size by a factor of 1.2, and set the font family to sans-serif:
 
 .. code-block:: python
-   :emphasize-lines: 4, 5, 6, 7
 
     >>> import matplotlib.pyplot as plt
     >>> import texplot
@@ -167,10 +161,9 @@ In the example below, we configure a dark background style, increase the font si
 Show and Save Plots
 ===================
 
-When working on a machine without display graphics, such as a remote server that lacks X11, displaying plots is not possible. Instead, plots should be saved. The :func:`texplot.save_plot` function provides a simple wrapper around `matplotlib.pyplot.savefig <https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.savefig.html>`__ to facilitate this. Additionally, the :func:`texplot.show_or_save_plot` function attempts to display plots initially. If no graphical backend is available, it saves the plot instead. Additionally, you can configure it to both show and save the plot. Here is an example:
+When working on a machine without display graphics, such as a remote server that lacks X11, displaying plots is not possible. Instead, plots should be saved. The `texplot.save_plot <https://ameli.github.io/texplot/generated/texplot.save_plot.html#texplot.save_plot>`__ function provides a simple wrapper around `matplotlib.pyplot.savefig <https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.savefig.html>`__ to facilitate this. Additionally, the `texplot.show_or_save_plot <https://ameli.github.io/texplot/generated/texplot.show_or_save_plot.html#texplot.show_or_save_plot>`__ function attempts to display plots initially. If no graphical backend is available, it saves the plot instead. Additionally, you can configure it to both show and save the plot. Here is an example:
 
 .. code-block:: python
-   :emphasize-lines: 11, 12, 13
 
     >>> import matplotlib.pyplot as plt
     >>> import texplot
@@ -182,9 +175,9 @@ When working on a machine without display graphics, such as a remote server that
     >>>     texplot.examples.lorenz(ax)
     >>>
     >>>     # Show and save plot
-    >>>     texplot.show_or_save(plt, default_filename='lorenz.pdf',
-    ...                          transparent_background=True, dpi=200,
-    ...                          show_and_save=True, verbose=True):
+    >>>     texplot.show_or_save_plot(plt, default_filename='lorenz.pdf',
+    ...                               transparent_background=True, dpi=200,
+    ...                               show_and_save=True, verbose=True)
     plot saved to '/home/user/lorenz.pdf'.
 
 .. figure:: ./docs/source/_static/images/plots/lorenz.png
@@ -195,7 +188,7 @@ When working on a machine without display graphics, such as a remote server that
 Test Package
 ============
 
-|codecov-devel|
+|build-linux| |codecov-devel|
 
 To test the package, first clone the source code from the repository and install the required test packages by:
 
@@ -250,5 +243,7 @@ License
    :target: https://github.com/ameli/texplot
 .. |languages| image:: https://img.shields.io/github/languages/count/ameli/texplot
    :target: https://github.com/ameli/texplot
+.. |build-linux| image:: https://img.shields.io/github/actions/workflow/status/ameli/texplot/build-linux.yml
+   :target: https://github.com/ameli/texplot/actions?query=workflow%3Abuild-linux 
 .. .. |binder| image:: https://mybinder.org/badge_logo.svg
 ..    :target: https://mybinder.org/v2/gh/ameli/texplot/HEAD?filepath=notebooks%2Fquick_start.ipynb
