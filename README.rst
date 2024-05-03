@@ -11,6 +11,7 @@ Links
 * `Documentation <https://ameli.github.io/texplot>`__
 * `PyPI <https://pypi.org/project/texplot/>`__
 * `Anaconda <https://anaconda.org/s-ameli/texplot>`__
+* `Github <https://github.com/ameli/texplot>`__
 
 Install
 =======
@@ -33,7 +34,7 @@ Install with ``conda``
 
 ::
 
-    conda install -c s-ameli texplot
+    conda install s-ameli::texplot
 
 Set Theme
 =========
@@ -56,7 +57,7 @@ Call `texplot.set_theme <https://ameli.github.io/texplot/generated/texplot.set_t
     >>> texplot.examples.plot_function(ax)
     >>> plt.show()
 
-.. figure:: /docs/source/_static/images/plots/function.png
+.. figure:: https://github.com/ameli/texplot/raw/main/docs/source/_static/images/plots/function.png
    :align: left
    :figwidth: 100%
    :width: 100%
@@ -73,7 +74,7 @@ The theme set as described above will affect your entire Python script for its d
     >>> texplot.examples.plot_function(ax2)
     >>> plt.show()
 
-.. figure:: /docs/source/_static/images/plots/function_no_theme.png
+.. figure:: https://github.com/ameli/texplot/raw/main/docs/source/_static/images/plots/function_no_theme.png
    :align: left
    :figwidth: 100%
    :width: 100%
@@ -153,7 +154,7 @@ In the example below, we configure a dark background style, increase the font si
     >>>     texplot.examples.plot_bifurcation_diagram(ax)
     >>>     plt.show()
 
-.. figure:: ./docs/source/_static/images/plots/logistic.png
+.. figure:: https://github.com/ameli/texplot/raw/main/docs/source/_static/images/plots/logistic.png
    :align: left
    :figwidth: 100%
    :width: 100%
@@ -180,7 +181,7 @@ When working on a machine without display graphics, such as a remote server that
     ...                               show_and_save=True, verbose=True)
     plot saved to '/home/user/lorenz.pdf'.
 
-.. figure:: ./docs/source/_static/images/plots/lorenz.png
+.. figure:: https://github.com/ameli/texplot/raw/main/docs/source/_static/images/plots/lorenz.png
    :align: left
    :figwidth: 100%
    :width: 100%
