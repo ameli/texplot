@@ -53,7 +53,7 @@ def test_theme():
     Test for `theme`, `set_theme`, `reset_theme`, and `save_plot` functions.
     """
 
-    texplot.set_theme()
+    texplot.set_theme(use_latex=False)
 
     # Plot an example function
     fig1, ax1 = plt.subplots()
@@ -84,7 +84,8 @@ def test_theme():
     with texplot.theme(
             rc={'font.family': 'sans-serif'},
             style='dark_background',
-            font_scale=1.2):
+            font_scale=1.2,
+            use_latex=False):
 
         # Plot an example diagram
         fig4, ax4 = plt.subplots()

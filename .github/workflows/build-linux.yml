@@ -31,11 +31,6 @@ jobs:
                   python -m pip install --upgrade pip
                   python -m pip install --upgrade .
 
-            - name: Prerequisite for test
-              run: |
-                  sudo apt update
-                  sudo apt-get install -y texlive-base texlive-latex-recommended texlive-fonts-recommended texlive-latex-extra
-
             # Despite the package is built on both cpython and pypy, here we
             # only test it on cpython, not on pypy, since many other required
             # dependencies (like matplotlib, etc) need to be compiled on pypy.
