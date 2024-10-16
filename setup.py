@@ -104,7 +104,7 @@ def main(argv):
         description=description,
         long_description=long_description,
         long_description_content_type='text/x-rst',
-        keywords="""reconstruct-data oceanographic-data hf-radar""",
+        keywords="""matplotlib plotting latex""",
         url=url,
         download_url=download_url,
         project_urls={

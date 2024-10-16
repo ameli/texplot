@@ -222,6 +222,11 @@ def _customize_theme_text():
         text_dict['text.usetex'] = True
         text_dict['text.latex.preamble'] = r'\usepackage{amsmath}' + \
                                            r'\usepackage{amsfonts}'
+    else:
+        raise RuntimeError(
+            '"latex" executable not found. Either set "use_latex" to False, '
+            'or ensure that LaTeX is installed and included in your system '
+            'PATH.')
 
     # Font (Note: this should be AFTER the plt.style.use)
     text_dict['font.family'] = 'serif'
