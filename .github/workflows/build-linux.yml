@@ -34,7 +34,7 @@ jobs:
             - name: Prerequisite for test
               run: |
                   sudo apt update
-                  sudo apt-get install -y texlive-base texlive-latex-recommended
+                  sudo apt-get install -y texlive-base texlive-latex-recommended texlive-fonts-recommended
 
             # Despite the package is built on both cpython and pypy, here we
             # only test it on cpython, not on pypy, since many other required
