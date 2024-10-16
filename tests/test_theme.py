@@ -65,7 +65,7 @@ def test_theme():
     texplot.reset_theme()
 
     # Check context manager for with environmebt
-    with texplot.theme():
+    with texplot.theme(use_latex=False):
         fig2, ax2 = plt.subplots()
         texplot.examples.plot_function(ax2)
         texplot.save_plot(plt, filename='function2.pdf',
