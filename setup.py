@@ -134,12 +134,6 @@ def main(argv):
             'test': test_requirements,
             'docs': docs_requirements,
         },
-        entry_points={
-            "console_scripts": [
-                "restore = texplot.__main__:main",
-                "restore-scan = texplot._scripts.scan:main"
-            ]
-        },
         classifiers=[
             'Programming Language :: Python',
             'Programming Language :: Python :: 3.9',

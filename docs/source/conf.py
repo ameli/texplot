@@ -312,10 +312,8 @@ ogp_type = "website"
 ogp_enable_meta_description = True
 ogp_custom_meta_tags = [
     '<meta property="og:title" content="texplot">',
-    '<meta property="og:description" content="texplot is a Python ' +
-    'package to restore incomplete oceanographic datasets and generate ' +
-    'data ensemble, allowing Lagrangian analysis and uncertainty ' +
-    'qualification on such datasets.">',
+    '<meta property="og:description" content="Enhance your matplotlib plots ' +
+    'with publication-quality style">'
 ]
 
 
