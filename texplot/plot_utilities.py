@@ -367,6 +367,7 @@ def save_plot(
         bbox_extra_artists=None,
         dpi=200,
         bbox_inches='tight',
+        pad_inches=0.1,
         verbose=False):
     """
     Saves plot as svg format in the current working directory.
@@ -418,7 +419,7 @@ def save_plot(
 
         plt.savefig(
                 fullpath_filename, dpi=dpi,
-                transparent=transparent_background,
+                transparent=transparent_background, pad_inches=pad_inches,
                 bbox_extra_artists=bbox_extra_artists, bbox_inches=bbox_inches)
 
         if verbose:
@@ -437,6 +438,7 @@ def show_or_save_plot(
         bbox_extra_artists=None,
         dpi=200,
         bbox_inches='tight',
+        pad_inches=0.1,
         show_and_save=False,
         verbose=False):
     """
@@ -470,6 +472,10 @@ def show_or_save_plot(
 
     bbox_inches: str, default='tight'
         Bbox in inches.
+
+    pad_inches: float, default=0.1
+        Amount of padding in inches around the figure when ``bbox_inches`` is
+        ``tight``.
 
     show_and_save : bool, default=False
         By default, the plot is either shown xor saved. But when this argument
@@ -537,7 +543,7 @@ def show_or_save_plot(
         # write the plot as SVG file in the current working directory
         save_plot(plt, filename,
                   transparent_background=transparent_background,
-                  bbox_extra_artists=bbox_extra_artists,
+                  bbox_extra_artists=bbox_extra_artists, pad_inches=pad_inches,
                   bbox_inches=bbox_inches, dpi=dpi, verbose=verbose)
 
         # Closing is necessary especially if a large number of plots are saved.
