@@ -210,7 +210,7 @@ def _customize_theme_context(context="notebook", font_scale=1):
 # customize theme text
 # ====================
 
-def _customize_theme_text():
+def _customize_theme_text(use_latex):
     """
     Returns a dictionary of settings that primarily sets LaTeX, if exists.
     """
@@ -222,11 +222,16 @@ def _customize_theme_text():
         text_dict['text.usetex'] = True
         text_dict['text.latex.preamble'] = r'\usepackage{amsmath}' + \
                                            r'\usepackage{amsfonts}'
-    else:
+    elif use_latex is True:
         raise RuntimeError(
             '"latex" executable not found. Either set "use_latex" to False, '
             'or ensure that LaTeX is installed and included in your system '
             'PATH.')
+
+    else:
+        # use_latex at this point is None, and latex was not found. Fall back
+        # to not using latex silently.
+        pass
 
     # Font (Note: this should be AFTER the plt.style.use)
     text_dict['font.family'] = 'serif'
@@ -242,7 +247,7 @@ def _customize_theme_text():
 def get_theme(
         context="notebook",
         font_scale=1,
-        use_latex=True,
+        use_latex=None,
         rc=None):
     """
     Returns a dictionary that can be used to update plt.rcParams.
@@ -283,8 +288,8 @@ def get_theme(
             context=context, font_scale=font_scale))
 
     # Set text rendering and font (such as using LaTeX)
-    if use_latex is True:
-        plt_rc_params.update(_customize_theme_text())
+    if (use_latex is True) or (use_latex is None):
+        plt_rc_params.update(_customize_theme_text(use_latex))
 
     # Add extra arguments
     if rc is not None:
@@ -301,7 +306,7 @@ def set_theme(
         context="notebook",
         font_scale=1,
         style=None,
-        use_latex=True,
+        use_latex=None,
         rc=None):
     """
     Sets a customized theme for plotting.
@@ -336,7 +341,7 @@ def theme(
         context="notebook",
         font_scale=1,
         style=None,
-        use_latex=True,
+        use_latex=None,
         rc=None):
     """
     """
