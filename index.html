@@ -367,8 +367,8 @@ span.prompt1:before {
 <section id="set-theme-globally">
 <h3>Set Theme Globally<a class="headerlink" href="#set-theme-globally" title="Permalink to this heading">#</a></h3>
 <p>Call <a class="reference internal" href="generated/texplot.set_theme.html#texplot.set_theme" title="texplot.set_theme"><code class="xref py py-func docutils literal notranslate"><span class="pre">texplot.set_theme()</span></code></a> function to set the <span class="synco">texplot</span> theme globally in your script:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span> <span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="hll"> <span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">texplot</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span> <span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="hll"> <span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span><span class="w"> </span><span class="nn">texplot</span>
 </span><span class="hll"> <span class="o">&gt;&gt;&gt;</span> <span class="n">texplot</span><span class="o">.</span><span class="n">set_theme</span><span class="p">()</span>
 </span>
  <span class="o">&gt;&gt;&gt;</span> <span class="c1"># Plot an example function</span>
@@ -397,8 +397,8 @@ span.prompt1:before {
 <section id="set-theme-within-a-local-scope">
 <h3>Set Theme Within a Local Scope<a class="headerlink" href="#set-theme-within-a-local-scope" title="Permalink to this heading">#</a></h3>
 <p>The <a class="reference internal" href="generated/texplot.theme.html#texplot.theme" title="texplot.theme"><code class="xref py py-func docutils literal notranslate"><span class="pre">texplot.theme()</span></code></a> function acts as a context manager, allowing you to apply the <span class="synco">texplot</span> theme within a specific local scope or function. The example below demonstrates setting the theme in a local scope. Outside of this scope, the default <cite>matplotlib</cite> theme remains unchanged.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span> <span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
- <span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">texplot</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span> <span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span><span class="w"> </span><span class="nn">texplot</span>
 
 <span class="hll"> <span class="o">&gt;&gt;&gt;</span> <span class="k">with</span> <span class="n">texplot</span><span class="o">.</span><span class="n">theme</span><span class="p">():</span>
 </span> <span class="o">&gt;&gt;&gt;</span>     <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
@@ -407,11 +407,11 @@ span.prompt1:before {
 </pre></div>
 </div>
 <p>Similarly, you can use the context manager with a function. In the example below, the <span class="synco">texplot</span> theme is applied only within the <code class="docutils literal notranslate"><span class="pre">plot()</span></code> function. Outside this function, the default <cite>matplotlib</cite> theme remains unchanged.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span> <span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
- <span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">texplot</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span> <span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span><span class="w"> </span><span class="nn">texplot</span>
 
 <span class="hll"> <span class="o">&gt;&gt;&gt;</span> <span class="nd">@texplot</span><span class="o">.</span><span class="n">theme</span><span class="p">()</span>
-</span> <span class="o">&gt;&gt;&gt;</span> <span class="k">def</span> <span class="nf">plot</span><span class="p">():</span>
+</span> <span class="o">&gt;&gt;&gt;</span> <span class="k">def</span><span class="w"> </span><span class="nf">plot</span><span class="p">():</span>
  <span class="o">&gt;&gt;&gt;</span>     <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
  <span class="o">&gt;&gt;&gt;</span>     <span class="n">texplot</span><span class="o">.</span><span class="n">examples</span><span class="o">.</span><span class="n">plot_function</span><span class="p">(</span><span class="n">ax</span><span class="p">)</span>
  <span class="o">&gt;&gt;&gt;</span>     <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
@@ -445,7 +445,7 @@ span.prompt1:before {
 <td><p>Scales the fonts.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">use_latex</span></code></p></td>
-<td><p>boolean (default is <cite>True</cite>)</p></td>
+<td><p>boolean (default is <cite>None</cite>)</p></td>
 <td><p>If <cite>True</cite>, the mathematical symbols are rendered with <span class="math notranslate nohighlight">\(\LaTeX\)</span>.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">rc</span></code></p></td>
@@ -455,8 +455,8 @@ span.prompt1:before {
 </tbody>
 </table>
 <p>In the example below, we configure a dark background style, increase the font size by a factor of 1.2, and set the font family to sans-serif:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span> <span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
- <span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">texplot</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span> <span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span><span class="w"> </span><span class="nn">texplot</span>
 
 <span class="hll"> <span class="o">&gt;&gt;&gt;</span> <span class="k">with</span> <span class="n">texplot</span><span class="o">.</span><span class="n">theme</span><span class="p">(</span>
 </span><span class="hll"> <span class="o">...</span>         <span class="n">rc</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;font.family&#39;</span><span class="p">:</span> <span class="s1">&#39;sans-serif&#39;</span><span class="p">},</span>
@@ -476,8 +476,8 @@ span.prompt1:before {
 <section id="show-and-save-plots">
 <h2>Show and Save Plots<a class="headerlink" href="#show-and-save-plots" title="Permalink to this heading">#</a></h2>
 <p>When working on a machine without display graphics, such as a remote server that lacks X11, displaying plots is not possible. Instead, plots should be saved. The <a class="reference internal" href="generated/texplot.save_plot.html#texplot.save_plot" title="texplot.save_plot"><code class="xref py py-func docutils literal notranslate"><span class="pre">texplot.save_plot()</span></code></a> function provides a simple wrapper around <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.savefig.html">matplotlib.pyplot.savefig</a> to facilitate this. Additionally, the <a class="reference internal" href="generated/texplot.show_or_save_plot.html#texplot.show_or_save_plot" title="texplot.show_or_save_plot"><code class="xref py py-func docutils literal notranslate"><span class="pre">texplot.show_or_save_plot()</span></code></a> function attempts to display plots initially. If no graphical backend is available, it saves the plot instead. Additionally, you can configure it to both show and save the plot. Here is an example:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span> <span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
- <span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">texplot</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span> <span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+ <span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span><span class="w"> </span><span class="nn">texplot</span>
 
  <span class="o">&gt;&gt;&gt;</span> <span class="k">with</span> <span class="n">texplot</span><span class="o">.</span><span class="n">theme</span><span class="p">(</span><span class="n">rc</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;font.family&#39;</span><span class="p">:</span> <span class="s1">&#39;sans-serif&#39;</span><span class="p">}):</span>
  <span class="o">&gt;&gt;&gt;</span>
