@@ -24,37 +24,43 @@ def is_notebook():
     ``False`` otherwise, including both ipython and python.
     """
 
+    if "ipykernel" in sys.modules:
+        # Any modern front-end built on ipykernel (Colab, Kaggle, VS Code)
+        return True
+
     try:
         from IPython import get_ipython
-        ip = get_ipython()
+    except ImportError:
+        return False
 
-        if ip is None:
+    ip = get_ipython()
+
+    if ip is None:
+        return False
+
+    else:
+        shell = ip.__class__.__name__
+
+        if shell == 'ZMQInteractiveShell':
+            # Jupyter notebook or qtconsole
+            return True
+
+        elif shell == 'TerminalInteractiveShell':
+            # Terminal running IPython
             return False
 
+        elif 'google.colab' in str(type(shell)):
+            # Colab’s shell (older runtimes)
+            return True
+
         else:
-            shell = ip.__class__.__name__
+            # Other type
+            return False
 
-            if shell == 'ZMQInteractiveShell':
-                # Jupyter notebook or qtconsole
-                return True
 
-            elif shell == 'TerminalInteractiveShell':
-                # Terminal running IPython
-                return False
+# ============
+# script guard
+# ============
 
-            elif "ipykernel" in sys.modules:
-                # Any front-end built on ipykernel (Colab, Kaggle, VS Code)
-                return True
-
-            elif 'google.colab' in str(type(shell)):
-                # Colab’s shell (older runtimes)
-                return True
-
-            else:
-                # Other type
-                return False
-
-    except NameError:
-
-        # Probably standard Python interpreter
-        return False
+if __name__ == "__main__":
+    print(is_notebook())
