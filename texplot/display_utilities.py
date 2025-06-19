@@ -7,6 +7,13 @@
 # directory of this source tree.
 
 
+# =======
+# Imports
+# =======
+
+import sys
+
+
 # ===========
 # is notebook
 # ===========
@@ -18,12 +25,36 @@ def is_notebook():
     """
 
     try:
-        shell = get_ipython().__class__.__name__
-        if shell == 'ZMQInteractiveShell':
-            return True   # Jupyter notebook or qtconsole
-        elif shell == 'TerminalInteractiveShell':
-            return False  # Terminal running IPython
+        from IPython import get_ipython
+        ip = get_ipython()
+
+        if ip is None:
+            return False
+
         else:
-            return False  # Other type
+            shell = ip.__class__.__name__
+
+            if shell == 'ZMQInteractiveShell':
+                # Jupyter notebook or qtconsole
+                return True
+
+            elif shell == 'TerminalInteractiveShell':
+                # Terminal running IPython
+                return False
+
+            elif "ipykernel" in sys.modules:
+                # Any front-end built on ipykernel (Colab, Kaggle, VS Code)
+                return True
+
+            elif 'google.colab' in str(type(shell)):
+                # Colab’s shell (older runtimes)
+                return True
+
+            else:
+                # Other type
+                return False
+
     except NameError:
-        return False      # Probably standard Python interpreter
+
+        # Probably standard Python interpreter
+        return False

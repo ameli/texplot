@@ -27,7 +27,7 @@ import warnings
 
 # Check DISPLAY
 if ((not bool(os.environ.get('DISPLAY', None))) or
-        (bool(os.environ.get('IMATE_NO_DISPLAY', None)))) and \
+        (bool(os.environ.get('TEXPLOT_NO_DISPLAY', None)))) and \
         (not is_notebook()):
 
     # No display found (used on servers). Using non-interactive backend

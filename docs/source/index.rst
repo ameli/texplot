@@ -156,8 +156,8 @@ You can customize the theme by passing arguments to either the :func:`texplot.se
       - float (default is ``1``)
       - Scales the fonts.
     * - ``use_latex``
-      - boolean (default is `None`)
-      - If `True`, the mathematical symbols are rendered with :math:`\LaTeX`.
+      - boolean (default is ``None``)
+      - If ``True``, the mathematical symbols are rendered with :math:`\LaTeX`.
     * - ``rc``
       - dictionary (default is ``{}``)
       - Passes any additional `matplotlib`'s `rcParam dictionary <https://matplotlib.org/stable/users/explain/customizing.html>`__.
